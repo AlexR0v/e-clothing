@@ -1,11 +1,16 @@
 import './App.css'
+import { Route, Switch } from 'react-router-dom'
 import HomePage from './pages/homepage/HomePage'
 
 function App () {
   return (
-    <div>
-      <HomePage/>
-    </div>
+    <Switch>
+      <Route
+        exact
+        path='/'
+        render={() => <HomePage />}
+      />
+    </Switch>
   )
 }
 
